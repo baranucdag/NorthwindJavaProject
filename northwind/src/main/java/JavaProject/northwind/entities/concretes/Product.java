@@ -1,5 +1,7 @@
 package JavaProject.northwind.entities.concretes;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import JavaProject.northwind.entities.abstracts.Entity;
@@ -9,7 +11,10 @@ import lombok.Data;
 @Table(name="products")
 public class Product implements Entity {
 
+		@Id
 		private int id;
+		
+		@Column(name="product_name")
 		private String productName; 	
 		private double unitPrice;
 		private short unitsInStock;
