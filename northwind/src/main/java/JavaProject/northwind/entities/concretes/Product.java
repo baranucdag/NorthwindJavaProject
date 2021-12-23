@@ -1,12 +1,16 @@
 package JavaProject.northwind.entities.concretes;
 
+import javax.persistence.Table;
+
 import JavaProject.northwind.entities.abstracts.Entity;
-
-
+import lombok.Data;
+ 	
+@javax.persistence.Entity
+@Table(name="products")
 public class Product implements Entity {
 
 		private int id;
-		private String productName;
+		private String productName; 	
 		private double unitPrice;
 		private short unitsInStock;
 		private String quantityPerUnit;
@@ -22,6 +26,7 @@ public class Product implements Entity {
 			this.quantityPerUnit = quantityPerUnit;
 			this.categoryId = categoryId;
 		}
+		
 		public int getId() {
 			return id;
 		}
