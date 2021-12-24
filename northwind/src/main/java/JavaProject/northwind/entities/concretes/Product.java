@@ -30,6 +30,7 @@ public class Product implements Entity {
 		@Column(name="category_id")
 		private int categoryId;
 		
+		public Product() {}
 		public Product(int id, String productName, double unitPrice, short unitsInStock, String quantityPerUnit,
 				int categoryId) {
 			super();
