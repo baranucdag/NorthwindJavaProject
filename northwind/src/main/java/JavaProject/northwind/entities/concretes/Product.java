@@ -1,24 +1,33 @@
 package JavaProject.northwind.entities.concretes;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import JavaProject.northwind.entities.abstracts.Entity;
-import lombok.Data;
  	
 @javax.persistence.Entity
 @Table(name="products")
 public class Product implements Entity {
 
 		@Id
+		@GeneratedValue
 		private int id;
 		
 		@Column(name="product_name")
 		private String productName; 	
+		
+		@Column(name="unit_price")
 		private double unitPrice;
+		
+		@Column(name="units_in_stock")
 		private short unitsInStock;
+		
+		@Column(name="quantity_per_unit")
 		private String quantityPerUnit;
+		
+		@Column(name="category_id")
 		private int categoryId;
 		
 		public Product(int id, String productName, double unitPrice, short unitsInStock, String quantityPerUnit,
