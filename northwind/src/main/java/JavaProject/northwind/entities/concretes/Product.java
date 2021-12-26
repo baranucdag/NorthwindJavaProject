@@ -1,18 +1,18 @@
 package JavaProject.northwind.entities.concretes;
 
 import javax.persistence.Column;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import JavaProject.northwind.entities.abstracts.Entity;
- 	
-@javax.persistence.Entity
+@javax.persistence.Entity 	
 @Table(name="products")
-public class Product implements Entity {
+public class Product {
 
 		@Id
 		@GeneratedValue
+		@Column(name="product_id")
 		private int id;
 		
 		@Column(name="product_name")
