@@ -14,9 +14,7 @@ import JavaProject.northwind.entities.concretes.Product;
 @RequestMapping("/api/products")
 public class ProductsController {
 	
-	
 	private ProductService productService;
-	
 	
 	@Autowired
 	public ProductsController(ProductService productService) {
@@ -29,6 +27,7 @@ public class ProductsController {
 	public List<Product> getAll(){
 		return this.productService.getAll();
 	}
+
 	 
 }
 
